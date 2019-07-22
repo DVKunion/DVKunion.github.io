@@ -44,30 +44,25 @@
 	
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
     
-		
-<!-- Layouts -->
-
-    <!-- Tags Cloud -->
-    
-<link rel="stylesheet" href="/css/item.css" />
-<style >
-    .row a{
-        border-bottom: none;
-    }
-    .special{
-        padding: 0;
-        padding: 2rem;
-    }
-</style>
-<body class="is-loading">
+		<body class="is-loading">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><!-- Wrapper 外包 s-->
-    <div id="wrapper" class="fade-in">
+    <div id="wrapper" class="fade-in overlay">
         <!-- Intro 头部显示 s -->
+                <div id="intro">
+            <h1>This is<br />
+                        DV.K </h1>
+            <p> The quieter you become <br/> The more you are able to hear
+            </p>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
         <!-- Intro 头部显示 e -->
         <!-- Header 头部logo start -->
         <header id="header">
     <a href="/" class="logo">DV.K</a>
 </header>
+        <!-- Header 头部logo end -->
         <!-- Nav 导航条 start -->
         <nav id="nav" class="special" >
             <ul class="menu links" >
@@ -124,30 +119,56 @@
                     
 			</ul>
 </nav>
-                <div id="main">
-            <!-- Main first s-->
-            <article id="me" class="panel">
-                <header style="color: #000000">
-                    <h1>DV.K</h1>
-                    <p>A  Salted  Fish  Who  Wants  To  Stand  Up</p>
-                </header>
-                <a href="/about/" class="jumplink pic">
-                    <span class="arrow icon fa-chevron-right"><span></span></span>
-                    <img src="/images/me.jpg" alt="" />
-                </a>
-            </article>
-            <!-- Main first e-->
-        </div>
+        <!-- Nav 导航条 end -->
+        <!-- Main 主要部分 start -->
+        
+        <!-- 文章列表   s -->
+        <div id="main" style="background-color: transparent; padding:0;">
+        <section class="link_container" style="margin-top: 0; background-color: transparent; ">
+            <div class="link_row">
+                <!-- 文章sample  s-->
 
-        <section class="special">
-                            <div class="row" style="border-bottom: none;">
-
-        <a href="/tags/CTF/" style="font-size: 17px;">CTF</a> <a href="/tags/Linux/" style="font-size: 16.2px;">Linux</a> <a href="/tags/Python-tools/" style="font-size: 16px;">Python-tools</a> <a href="/tags/Python3/" style="font-size: 16.6px;">Python3</a> <a href="/tags/Robot/" style="font-size: 16px;">Robot</a> <a href="/tags/WEB/" style="font-size: 16.6px;">WEB</a> <a href="/tags/WP/" style="font-size: 16.6px;">WP</a> <a href="/tags/前端/" style="font-size: 16px;">前端</a> <a href="/tags/加密认证/" style="font-size: 16.4px;">加密认证</a> <a href="/tags/容器/" style="font-size: 16px;">容器</a> <a href="/tags/密码学/" style="font-size: 16.8px;">密码学</a> <a href="/tags/常用编码/" style="font-size: 16.2px;">常用编码</a> <a href="/tags/思科认证/" style="font-size: 16px;">思科认证</a> <a href="/tags/操作系统/" style="font-size: 16px;">操作系统</a> <a href="/tags/数字签名/" style="font-size: 16px;">数字签名</a> <a href="/tags/渗透测试/" style="font-size: 16px;">渗透测试</a> <a href="/tags/环境搭建/" style="font-size: 16px;">环境搭建</a> <a href="/tags/笔记/" style="font-size: 16.2px;">笔记</a> <a href="/tags/管理工具/" style="font-size: 16.4px;">管理工具</a> <a href="/tags/脚本/" style="font-size: 16.4px;">脚本</a> <a href="/tags/计算机网络/" style="font-size: 16px;">计算机网络</a> <a href="/tags/运维/" style="font-size: 16.4px;">运维</a>
-
+                
+                <div class="6u 12u(narrower)">
+                    <section class="link_box special">
+                       <a href="/2019/07/22/前端基础/">
+                        <div class="page_title" style="background-image: url(http://dvkunion.cn/450D29E6BC395B631D6EB1F68556E49D.png);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;">
+                            <!--标题-->
+                            <h2 class="page_title_text"> 前端基础 </h2>
+                            <!--段落-->
+                        </div>
+                        </a>
+                        <div class="home-post-info">
+                            <!-- Author Avatar -->
+                            <div class="home-post-info-author-avatar">
+                                <h6><span class="home-post-info-data">2019-07-22</span></h6>
+                                <div class="home-post-info-Category">
+                                    <!-- Category -->
+                                    <span>
+                            <h6>
+                            <a class="post_category-link" href="http://localhost:4000/categories/Algorithm/">
+                                <a class="post_category-link" href="/categories/Reading/">Reading</a></a>
+                            </h6>
+                        </span>
+                                </div>
                             </div>
-                    
+                        </div>
+                    </section>
+                </div>
+                <!-- 文章sample  e-->
+            
+            </div>
         </section>
+        </div>
+        <!-- 文章列表   end -->
+        <!-- Main 主要部分 end -->
+        <!-- footer  页码 start-->
+        <footer style="text-align: center; padding-top: 2em;">
+  
+</footer>
 
+
+        <!-- footer  页码 end-->
         <!-- Copyright 版权 start -->
                 <div id="copyright">
             <ul>
@@ -168,9 +189,11 @@
             	<span id="busuanzi_container_site_pv">2019/07/22    总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
+        <!-- Copyright 版权 end -->
     </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":100,"height":175},"mobile":{"show":true},"log":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":100,"height":175},"mobile":{"show":true},"log":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":100,"height":175},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
-
+    <!-- Wrapper 外包 e-->
+    <!-- Scripts -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":100,"height":175},"mobile":{"show":true},"log":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":100,"height":175},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
  	
 </html>
