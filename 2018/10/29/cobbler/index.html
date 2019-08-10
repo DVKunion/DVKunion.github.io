@@ -85,7 +85,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2019/07/">July 2019</a></li><li><a class="archive-link" href="/archives/2019/06/">June 2019</a></li><li><a class="archive-link" href="/archives/2019/05/">May 2019</a></li><li><a class="archive-link" href="/archives/2019/03/">March 2019</a></li><li><a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2019/01/">January 2019</a></li><li><a class="archive-link" href="/archives/2018/12/">December 2018</a></li><li><a class="archive-link" href="/archives/2018/11/">November 2018</a></li><li><a class="archive-link" href="/archives/2018/10/">October 2018</a>
+	                        <a class="archive-link" href="/archives/2019/08/">August 2019</a></li><li><a class="archive-link" href="/archives/2019/07/">July 2019</a></li><li><a class="archive-link" href="/archives/2019/06/">June 2019</a></li><li><a class="archive-link" href="/archives/2019/05/">May 2019</a></li><li><a class="archive-link" href="/archives/2019/03/">March 2019</a></li><li><a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2019/01/">January 2019</a></li><li><a class="archive-link" href="/archives/2018/12/">December 2018</a></li><li><a class="archive-link" href="/archives/2018/11/">November 2018</a></li><li><a class="archive-link" href="/archives/2018/10/">October 2018</a>
 	                    </ul>
 	        </li>
 	        
@@ -126,12 +126,16 @@
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
                 <div id="head"></div>
-
-<h1 id="Cobbler"><a href="#Cobbler" class="headerlink" title="Cobbler"></a>Cobbler</h1><hr>
+<h1>Cobbler</h1>
+<hr>
 <div id="0x00"></div>
+<h3><b>0x00- - Cobbler 简介<b></b></b></h3>
+<p>Cobbler 是一个 Linux 服务器自动化快速部署的服务，由Python语言开发，依赖于httpd，其实现原理、过程及需要的文件与kickstart大致一样，cobbler可以看作是一个更多功能的pxe。<br>
+Cobbler 简化了kickstart手动配置dhcp等复杂的过程，对于基本系统的安装，Cobbler只需生成一个distro和一个profile即可。distro相当于一个镜像，它提供安装系统过程中所需的一切文件，如vmlinuz,initrd以及rpm包等。profile的作用是为了自动修改pxelinux.cfg目录下的default文件，每生成或修改一次profile，都会在default文件中修改或追加对应的label。<br>
+Cobbler可以使用命令行方式管理，也提供了基于Web的界面管理工具(cobbler-web)，还提供了API接口，可以方便二次开发使用。</p>
+<h3><b>0x01- - Cobbler 环境搭建<b></b></b></h3>
+<h3><b>0x02- - <b></b></b></h3>
 
-<h3 id="0x00-Cobbler-简介"><a href="#0x00-Cobbler-简介" class="headerlink" title="0x00- - Cobbler 简介"></a><b>0x00- - Cobbler 简介<b></b></b></h3><p>Cobbler 是一个 Linux 服务器自动化快速部署的服务，由Python语言开发，依赖于httpd，其实现原理、过程及需要的文件与kickstart大致一样，cobbler可以看作是一个更多功能的pxe。<br>Cobbler 简化了kickstart手动配置dhcp等复杂的过程，对于基本系统的安装，Cobbler只需生成一个distro和一个profile即可。distro相当于一个镜像，它提供安装系统过程中所需的一切文件，如vmlinuz,initrd以及rpm包等。profile的作用是为了自动修改pxelinux.cfg目录下的default文件，每生成或修改一次profile，都会在default文件中修改或追加对应的label。<br>Cobbler可以使用命令行方式管理，也提供了基于Web的界面管理工具(cobbler-web)，还提供了API接口，可以方便二次开发使用。</p>
-<h3 id="0x01-Cobbler-环境搭建"><a href="#0x01-Cobbler-环境搭建" class="headerlink" title="0x01- - Cobbler 环境搭建"></a><b>0x01- - Cobbler 环境搭建<b></b></b></h3><h3 id="0x02"><a href="#0x02" class="headerlink" title="0x02- - "></a><b>0x02- - <b></b></b></h3>
             </div>
 
             <!-- Post Comments -->
@@ -237,7 +241,7 @@ $('.btn_click_load').click(function() {
 
             <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             
-            	<span id="busuanzi_container_site_pv">2019/07/23    总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+            	<span id="busuanzi_container_site_pv">2019/08/11    总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
     </div>

@@ -120,25 +120,121 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ws1.sinaimg.cn/large/006IjVYfgy1fz4xrr2ytfj31hc0u0amt.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Flask</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://dvkunion.cn/IMG_1908.JPG);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >mongodb</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <h1>Flask</h1>
-<h3><b>0x00- - 前言<b></b></b></h3>
-<p>2019 新的一年啦 (｡◕∀◕｡) 准备为学校搞一个CTF的训练平台 ~<br>
-虽然还欠着好多事没做 (◞‸◟) orz...<br>
-但是我还是开了一个新的东西哈哈哈哈哈哈 ....<br>
-CTFd是基于flask的一个CTF平台框架，为了个性化一下这个，又跑去看flask的教程手册......<em>(´ཀ`」 ∠)</em><br>
-头大。 (☍﹏⁰)</p>
-<h3><b>0x01- - Flask简介<b></b></b></h3>
-<p>Flask是Python四大Web框架之一(django、flask、<a href="http://web.py" target="_blank" rel="noopener">web.py</a>、tornado)，是一个Python编写的轻量级、微内核的WEB框架。它不同于Django全栈式类型，只保留了web的基本功能。</p>
-<h3><b>0x02- - Flask安装<b></b></b></h3>
-<p>pip安装即可<br>
-<code># pip install Flask</code></p>
-<h3><b>0x03- - Flask构成<b></b></b></h3>
-
+                <h1>Mongodb</h1>
+<center><small>2019-08-10</small></center>
+<p>Nice (๑•̀ㅂ•́)و✧ 上一篇前端文章还没写完，我又厚颜无耻的搞新东西了。<br>
+(っ<em>´Д`)っ 但是我真的真的，需要一个数据库支持，不然工具的开发性能这一块一直会卡着我。<br>
+(っ</em>´Д`)っ 三天打鱼两天晒网。</p>
+<center><small>华丽的分割线</small></center>
+<hr>
+<h3><b>0x00- - 简介</b></h3>
+<p>又是日常的简介哈哈哈....(强颜欢笑╮(╯__╰)╭)要去看数据库这一块真的是因为最近在搞开发玩，所以从开发的角度遇到了一系列的问题。在之后的工作和渗透中也能起到很好的帮助。</p>
+<p>因为任何信息总归需要一个存储，当数量级上来了之后简单的写成一个文件已经不能满足增删改查在速度和性能等方面的需求，以及数据存储所需要的空间。这种时候就显现出数据库的强大了。</p>
+<p>关于数据库的选择上，我也纠结了很久。。。不用win了access和sqlserver我就直接pass掉了，oracle又不免费<del>(其实就是懒得去搞)</del>，mysql和mariadb....emmmm安装费劲然后可转移性我也不太喜欢。。。最后考虑的就是postgresql、mongodb、redis这几个了。</p>
+<p>首先 postgresql 之前搞msf时候看过几下。。。总觉得接受不了postgresql的布局逻辑。。。不能理解他的内部。py的支持上也没搞好。。。</p>
+<p>然后是redis，这个听老师讲都是用来做一些缓存之类的，存储数据的数量级非常有限，实际意义上不太作用于数据存储这一块。咱也不知道最后功能和数据要扩展到多少。。。反正先得往大了整吧。。。</p>
+<p>所以综上，就有了这篇文章的由来。</p>
+<p>然后接触了mongodb之后感觉，嗯，真香。<br>
+果然这种简单粗暴 概念不抽象且易懂的才是好数据库。(呲牙)</p>
+<p>那么mongodb是一个什么东西呢？他较其他的数据库有哪些优点和特性呢？</p>
+<p>首先mongodb是由 <b><u>C++ </u></b> 编写，照xx百科的话：<b><u>是非关系数据库当中功能最丰富，最像关系数据库的。</u></b><br>
+mongodb介于关系数据库和非关系数据库之间，支持的数据结构类似于json、bson。</p>
+<p>MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。字段值可以包含其他文档，数组及文档数组。</p>
+<p>以下为概念性知识点：</p>
+<div>(概念好讨厌啊复制粘贴下好了)  
+<p>关系型数据库遵循的ACID规则：A (Atomicity) 原子性、C (Consistency) 一致性、I (Isolation) 独立性、D (Durability) 持久性。</p>
+<p>分布式计算的优点：可靠性、可扩展性、资源共享、灵活性、更快的速度、更高的性能</p>
+<p>NoSQL:指的是非关系型的数据库。NoSQL有时也称作Not Only SQL的缩写，是对不同于传统的关系型数据库的数据库管理系统的统称。</p>
+<p>CAP定理 :布鲁尔定理（Brewer's theorem）, 它指出对于一个分布式计算系统来说，不可能同时满足以下三点:</p>
+<pre><code>一致性(Consistency) (所有节点在同一时间具有相同的数据)
+可用性(Availability) (保证每个请求不管成功或者失败都有响应)
+分隔容忍(Partition tolerance) (系统中任意信息的丢失或失败不会影响系统的继续运作)
+</code></pre>
+<p>因此将NoSQL数据库可分为：</p>
+<pre><code>CA - 单点集群，满足一致性，可用性的系统，通常在可扩展性上不太强大。
+CP - 满足一致性，分区容忍性的系统，通常性能不是特别高。
+AP - 满足可用性，分区容忍性的系统，通常可能对一致性要求低一些。
+</code></pre>
+<p>BASE：是NoSQL数据库通常对可用性及一致性的弱要求原则:</p>
+<pre><code>Basically Availble --基本可用
+Soft-state --软状态/柔性事务。 &quot;Soft state&quot; 可以理解为&quot;无连接&quot;的, 而 &quot;Hard state&quot; 是&quot;面向连接&quot;的
+Eventual Consistency -- 最终一致性， 也是是 ACID 的最终目的。
+</code></pre>
+<h3><b>0x01- - 基本操作</b></h3>
+<p>安装过程跳过 只记录几个重点：</p>
+<ul>
+<li>· mongodb默认端口号：27017</li>
+<li>· mongodb默认数据路径：/data/db/</li>
+<li>· mongodb配置文件：/etc/mongod.conf</li>
+</ul>
+<p>然后借用菜鸟 <a href="https://www.runoob.com" target="_blank" rel="noopener">https://www.runoob.com</a> 的一张表，详细的对应了关系数据库内的一些定义和mongodb内的一些名词的映射：</p>
+<table>
+<thead>
+<tr>
+<th>SQL术语/概念</th>
+<th>MongoDB术语/概念</th>
+<th>解释/说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>database</td>
+<td>database</td>
+<td>数据库</td>
+</tr>
+<tr>
+<td>table</td>
+<td>collection</td>
+<td>数据库表/集合</td>
+</tr>
+<tr>
+<td>row</td>
+<td>document</td>
+<td>数据记录行/文档</td>
+</tr>
+<tr>
+<td>column</td>
+<td>field</td>
+<td>数据字段/域</td>
+</tr>
+<tr>
+<td>index</td>
+<td>index</td>
+<td>索引</td>
+</tr>
+<tr>
+<td>table joins</td>
+<td></td>
+<td>表连接,MongoDB不支持</td>
+</tr>
+<tr>
+<td>primary key</td>
+<td>primary key</td>
+<td>主键,MongoDB自动将_id字段设置为主键 /名称 / 含义</td>
+</tr>
+</tbody>
+</table>
+<p>之后列出一些常用语句：</p>
+<p>列出数据库: <code>&gt; show dbs</code><br>
+列出当前数据库: <code>&gt; db</code><br>
+创建/切换数据库：<code>&gt; use admin</code><br>
+默认存在的三个数据库: <code>admin config local</code><br>
+删除数据库 ：<code>&gt; db.dropDatabase()</code></p>
+<p>创建集合：<code>db.createCollection(name,options)</code>   name为集合名，options为选项。如：{capped:true,size:10}<br>
+查看集合：<code>show collections</code><br>
+删除集合：<code>db.(collections_name).drop()</code></p>
+<p>插入数据：<code>db.(collections_name).insert(document)</code><br>
+查找数据：<code>db.(collections_name).find()</code><br>
+更新数据：<code>db.(collections_name).update(query update multi:boolen)</code> query 相当于where update相当于 set<br>
+只更新数据的一个值：<code>db.(collections_name).update(query $set:update multi:boolen)</code><br>
+保存：<code>db.(collections_name).save(document)</code><br>
+删除：<code>db.(collections_name).remove(query update justOne:boolen)</code></p>
+</div>
             </div>
 
             <!-- Post Comments -->
@@ -200,8 +296,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2019/01/13/Flask/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2019/01/13/Flask/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2019/08/10/mongodb/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/08/10/mongodb/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
