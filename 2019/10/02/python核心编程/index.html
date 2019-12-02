@@ -120,124 +120,133 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://ws1.sinaimg.cn/large/4c06e311gy1fwbjsvozt1j215o0mm1kx.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >python3--learning--③</h2></a>
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://dvkunion.cn/231565449982_.pic_hd.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >python核心编程</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <div id="head"></div>
-<h1>Python 3</h1>
+                <h1>python核心编程</h1>
+<center><small>2019-10-01</small></center>
+新的月份开始，也开始准备新的目标。
+<center><small>华丽的分割线</small></center>
 <hr>
-<h4><b><i><font color="LightSkyBlue">目录</font><i><b></b></i></i></b></h4>
-<p><a href="https://dvkunion.github.io/2018/10/17/python3-learning①/" target="_blank" rel="noopener">①<br>
-<a href="https://dvkunion.github.io/2018/10/19/python3-learning②/" target="_blank" rel="noopener">②<br>
-<a href="https://dvkunion.github.io/2018/10/20/python3-learning③/" target="_blank" rel="noopener">③</a></a></a></p>
-<ol>
-<li><a href="#0x07">0x07--输入输出&amp;文件操作</a>
-<ol>
-<li><a href="#0x07-1">输入输出</a></li>
-<li><a href="#0x07-2">文件操作</a></li>
-</ol>
-</li>
-<li><a href="#0x08">0x08--CSV数据</a></li>
-<li><a href="#0x09">0x09--系统监测</a>
-<ol>
-<li><a href="#0x04-1">工具使用</a></li>
-</ol>
-<!--vmstat,iostat,top,sar,dstat,ifstat-->
-<ol start="2">
-<li><a href="#0x04-2">类--class</a></li>
-</ol>
-</li>
-<li><a href="#0x0A">0x0A--系统监测</a>
-<ol>
-<li><a href="#0x05-1"></a></li>
-<li><a href="#0x05-2"></a></li>
-</ol>
-</li>
-<li><a href="#0x0B">0X0B--插件和依赖支持安装</a></li>
-</ol>
-<hr>
-<div id="0x07"></div>
-<h3><b>0x07- - 输入输出&amp;文件操作<b></b></b></h3>
-<div id="0x07-1"></div>
-<h4><font color="blue">输入输出</font><br></h4>
-<p>输入：input()<br>
-输出：print()<br>
-输出字符串：str()/repr()<br>
-Python的输出自带换行，当我们想要进行不换行的输出时，应使用 end 参数。</p>
-<p><code>print(&quot;不换行输出&quot;,end=&quot;&quot;)</code></p>
-<p>当我们想要控制输出格式时候，可以使用占位符或format参数。<br>
-占位符要紧跟在其后：</p>
-<p><code>print(&quot;int %d &quot; % 1+&quot;float %.3f &quot;% 2.3)</code></p>
-<p>而format函数则需要位置映射/关键字映射/元素映射。<br>
-位置映射就是指默认的一一对应，一个萝卜一个坑：</p>
-<p><code>print(&quot;{},{}&quot;.format('第一个萝卜','第二个萝卜'))</code></p>
-<p>关键字映射就是指key，类似占位一样,没人占的位置就遵循位置映射规则：</p>
-<p><code>print(&quot;{Lisi},{Zhangsan},{}&quot;.format('noname',Lisi=&quot;Lisi's&quot;,Zhangsan=&quot;Zhangsan's&quot;))</code></p>
-<p>关键字映射无视format函数内的参数位置。<br>
-最后的元素映射就是将format当作一个元组用下表访问：</p>
-<p><code>print(&quot;{0[0]},{0[1]}&quot;.format(('first','second')))</code></p>
-<p>format还可以进行居中(^),左对齐(&lt;),右对齐(&gt;)操作<br>
-格式为：</p>
-<p><code>{索引:(填充符)(对齐符)(字符宽度)}</code></p>
-<p>例如</p>
-<p><code>print(&quot;{0},{1}={2:*&gt;3&quot;.format(3,2,2*3))</code></p>
-<p>对于输入，有一个一行输入多个数据的方法：</p>
-<p><code>a, b, c = map(int, input().split())</code></p>
-<div id="0x07-2"></div>
-<h4><font color="blue">文件操作</font><br></h4>
-<p>open可以返回一个file对象</p>
-<p><code>f = open(&quot;/tmp/test.txt,&quot;w&quot;)</code></p>
-<p>第一个参数为路径&amp;文件名，第二个参数为mode模式，分为'r'只读、'w'只写、'a'读写。</p>
-<p>对于file对象，存在以下的方法:</p>
+<h3><b>0x00- - 正则表达式</b></h3>
+<p><b>1. 简介</b><br>
+我不是很理解作为一本编程的进阶书目，把正则表达式放在第一章的意义是什么。但是在多数场合下正则表达式又是一种非常有效的手段，在进行字符串搜索和处理能够起到奇效。由此，将正则表达式(regex)作为第一章的开端也无可厚非。<br>
+正则表达式是是一种高级的文本模式匹配、抽取、与/或文本形式的基础。它能够按照某种模式匹配一系列有相似特征的字符串。使字符串的操作更佳高效。</p>
+<p>放一个我学习的目录地址：<a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="noopener">http://deerchao.net/tutorials/regex/regex.htm</a></p>
 <table>
 <thead>
 <tr>
-<th>函数名称</th>
-<th>函数功能</th>
+<th>符号</th>
+<th>说明</th>
+<th>举例(正则/匹配字符串)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>f.read()</td>
-<td>读取文件内容，返回str</td>
+<td>dvk</td>
+<td>(纯粹输入想要匹配的完整字符串)匹配字符串'dvk'</td>
+<td>dvk/dvk</td>
 </tr>
 <tr>
-<td>f.readline()</td>
-<td>读取文件的单独一行，遇到'\n'结束，返回str</td>
+<td>.</td>
+<td>可以匹配除了换行符以外的任意字符(除\n之外)</td>
+<td>b.b / 任意形式的如bab\bbb\bcb...</td>
 </tr>
 <tr>
-<td>f.readlines()</td>
-<td>返回该文件中包含的所有行。如果设置可选参数 sizehint, 则读取指定长度的字节, 并且将这些字节按行分割。</td>
+<td>'^'</td>
+<td>匹配字符串的开始</td>
+<td>^Dear / 开头是Dear的字符串</td>
 </tr>
 <tr>
-<td>f.write(str)</td>
-<td>将一个str写入到文件内，然后返回写入字符数</td>
+<td>'$'</td>
+<td>匹配字符串的结束</td>
+<td>/bin/*sh$ / 结尾是/bin/*sh的字符串</td>
 </tr>
 <tr>
-<td>f.tell()</td>
-<td>返回文件对象当前所处的位置, 它是从文件开头开始算起的字节数。</td>
+<td>*</td>
+<td>'*'可以0次或多次匹配</td>
+<td>[A-Za-z0-9]* /任意长度的大写、小写、数字的字符串</td>
 </tr>
 <tr>
-<td>f.seek()</td>
-<td>seek(x,0) ： 从起始位置即文件首行首字符开始移动 x 个字符，seek(x,1) ： 表示从当前位置往后移动x个字符，seek(-x,2)：表示从文件的结尾往前移动x个字符</td>
+<td>+</td>
+<td>'+'可以匹配重复一次或是更多次</td>
+<td>[a-z]+.com / 简单的.com域名匹配</td>
+</tr>
+<tr>
+<td>?</td>
+<td>匹配0次或者1次</td>
+<td>goo? /匹配goo或go</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>代表一个单词的开头或是结尾。</td>
+<td>\bthe / 以the开头的字符串</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>代表数字、字母或是下划线或汉字</td>
+<td></td>
+</tr>
+<tr>
+<td>\d</td>
+<td>表示数字;\d{2}表示\d必须连续匹配两次。</td>
+<td></td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任意的空白符</td>
+<td></td>
+</tr>
+<tr>
+<td>''</td>
+<td>转义字符,可以表示字符串中出现的元字符</td>
+<td></td>
+</tr>
+<tr>
+<td>'()'</td>
+<td>优先级运算</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<div id="0x08"></div>
-<h3><b>0x08- - CSV数据<b></b></b></h3>
-<p>     逗号分隔值(Comma-Separated Values，CSV，有时也称为字符分隔值，因为分隔字符也可以不是逗号)。其文件以纯文本形式存储表格数据（数字和文本）。纯文本意味着该文件是一个字符序列，不含必须像二进制数字那样被解读的数据。CSV文件由任意数目的记录组成，记录间以某种换行符分隔；每条记录由字段组成，字段间的分隔符是其它字符或字符串，最常见的是逗号或制表符。通常，所有记录都有完全相同的字段序列。通常都是纯文本文件。<br>
-存在以下特征的即可称为CSV格式：</p>
-<ol>
-<li>1.纯文本，使用某个字符集，比如ASCII、Unicode、EBCDIC或GB2312；</li>
-<li>2.由记录组成（典型的是每行一条记录）；</li>
-<li>3.每条记录被分隔符分隔为字段（典型分隔符有逗号、分号或制表符；有时分隔符可以包括可选的空格）；</li>
-<li>4.每条记录都有同样的字段序列。</li>
-</ol>
-<p>Python中有内置的CSV库，可以方便的帮助处理CSV数据。</p>
-<p><a href="#head"><center><font color="Crimson">back --返回</font></center><br>
-</a></p>
+<p>反义：大写\W</p>
+<p><b>1.2. 字符类:</b></p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[]</td>
+<td>限定匹配范围。例如:[0-9]表示只能是0至9这十个数字中的一个。反义:[^]</td>
+</tr>
+<tr>
+<td>''</td>
+<td>分支条件</td>
+</tr>
+<tr>
+<td>(epx)</td>
+<td>匹配epx并捕获epx并放到默认分组中</td>
+</tr>
+<tr>
+<td>(?'name'epx)</td>
+<td>匹配epx并捕获epx放到自己命名的分组</td>
+</tr>
+<tr>
+<td>(?:exp)</td>
+<td>匹配exp,不捕获匹配的文本，也不给此分组分配组号</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
             </div>
 
@@ -300,8 +309,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2018/10/20/python3-learning③/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2018/10/20/python3-learning③/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2019/10/02/python核心编程/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/10/02/python核心编程/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 

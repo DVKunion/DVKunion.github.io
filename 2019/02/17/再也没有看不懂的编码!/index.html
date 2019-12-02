@@ -85,7 +85,7 @@
 	            <a href="#s1">归档</a>
 	                    <ul class="submenu">
 	                        <li>
-	                        <a class="archive-link" href="/archives/2019/08/">August 2019</a></li><li><a class="archive-link" href="/archives/2019/07/">July 2019</a></li><li><a class="archive-link" href="/archives/2019/06/">June 2019</a></li><li><a class="archive-link" href="/archives/2019/05/">May 2019</a></li><li><a class="archive-link" href="/archives/2019/03/">March 2019</a></li><li><a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2019/01/">January 2019</a></li><li><a class="archive-link" href="/archives/2018/12/">December 2018</a></li><li><a class="archive-link" href="/archives/2018/11/">November 2018</a></li><li><a class="archive-link" href="/archives/2018/10/">October 2018</a>
+	                        <a class="archive-link" href="/archives/2019/10/">October 2019</a></li><li><a class="archive-link" href="/archives/2019/08/">August 2019</a></li><li><a class="archive-link" href="/archives/2019/07/">July 2019</a></li><li><a class="archive-link" href="/archives/2019/06/">June 2019</a></li><li><a class="archive-link" href="/archives/2019/05/">May 2019</a></li><li><a class="archive-link" href="/archives/2019/03/">March 2019</a></li><li><a class="archive-link" href="/archives/2019/02/">February 2019</a></li><li><a class="archive-link" href="/archives/2019/01/">January 2019</a></li><li><a class="archive-link" href="/archives/2018/12/">December 2018</a></li><li><a class="archive-link" href="/archives/2018/11/">November 2018</a></li><li><a class="archive-link" href="/archives/2018/10/">October 2018</a>
 	                    </ul>
 	        </li>
 	        
@@ -134,8 +134,6 @@
 <p>终于把这篇文章算是更新完结了。<br>
 揣摩了大佬的编码讲解文章，修改和增添了一些内容。<br>
 在未来遇到更多的编码时会不断的向这其中添加。</p>
-<center><small>2019/3/7</small></center>
-<p>新增正则表达式</p>
 <br>
 <center><small>华丽的分割线</small></center>
 <hr>
@@ -414,101 +412,6 @@ js源码开放：<a href="https://github.com/sym233/core-values-encoder" target=
 在线工具：<a href="https://sym233.github.io/core-values-encoder/" target="_blank" rel="noopener">https://sym233.github.io/core-values-encoder/</a><br>
 		<a href="https://atool.vip/morse" target="_blank" rel="noopener">https://atool.vip/morse</a> (这个很强大)</p>
 <h3><b>0x03- - Others</b></h3>
-<h4><font color="blue">正则表达式</font><br></h4>
-<p>这个坑过了这么久总算是想要好好的补上了...想来想去还是放在了这个地方...因为觉得在单独开一篇来写正则不太值得...因为这个东西看上去感觉，哇，好难...接触以后其实语法还是算较为友好的...<br>
-放一个我学习的目录地址：<a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="noopener">http://deerchao.net/tutorials/regex/regex.htm</a></p>
-<p>从最基本的开始：</p>
-<p><b>1.元字符:</b></p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\b</td>
-<td>代表一个单词的开头或是结尾。</td>
-</tr>
-<tr>
-<td>.</td>
-<td>'.'可以匹配除了换行符以外的任意字符</td>
-</tr>
-<tr>
-<td>*</td>
-<td>'*'可以匹配任意数量的字符</td>
-</tr>
-<tr>
-<td>\w</td>
-<td>代表数字、字母或是下划线或汉字</td>
-</tr>
-<tr>
-<td>+</td>
-<td>'+'可以匹配重复一次或是更多次</td>
-</tr>
-<tr>
-<td>\d</td>
-<td>表示数字;\d{2}表示\d必须连续匹配两次。</td>
-</tr>
-<tr>
-<td>\s</td>
-<td>匹配任意的空白符</td>
-</tr>
-<tr>
-<td>'$'</td>
-<td>匹配字符串的结束</td>
-</tr>
-<tr>
-<td>'^'</td>
-<td>匹配字符串的开始</td>
-</tr>
-<tr>
-<td>''</td>
-<td>转义字符,可以表示字符串中出现的元字符</td>
-</tr>
-<tr>
-<td>'()'</td>
-<td>优先级运算</td>
-</tr>
-</tbody>
-</table>
-<p>反义：大写\W</p>
-<p><b>2.字符类:</b></p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[]</td>
-<td>限定匹配范围。例如:[0-9]表示只能是0至9这十个数字中的一个。反义:[^]</td>
-</tr>
-<tr>
-<td>''</td>
-<td>分支条件</td>
-</tr>
-<tr>
-<td>(epx)</td>
-<td>匹配epx并捕获epx并放到默认分组中</td>
-</tr>
-<tr>
-<td>(?'name'epx)</td>
-<td>匹配epx并捕获epx放到自己命名的分组</td>
-</tr>
-<tr>
-<td>(?:exp)</td>
-<td>匹配exp,不捕获匹配的文本，也不给此分组分配组号</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <h4><font color="blue">Morse code</font><br></h4>
 <p>这个就已经很古老了.....直接对应表查表就好了。<br>
 有些地方把这个算作密码......我觉得还是莫尔斯还是一种编码的性质，作为信息的传输作用，并没有隐藏信息的功能。</p>
@@ -621,11 +524,11 @@ $('.btn_click_load').click(function() {
 
             <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             
-            	<span id="busuanzi_container_site_pv">2019/10/02    总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+            	<span id="busuanzi_container_site_pv">2019/12/02    总访问量<span id="busuanzi_value_site_pv"></span>次</span>
 			
         </div>
     </div>
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":100,"height":175},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":100,"height":175},"mobile":{"show":true},"log":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":100,"height":175},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
 </script>
@@ -642,7 +545,7 @@ $('.btn_click_load').click(function() {
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
 </script>
 <!-- End: Injected MathJax -->
-<!-- hexo-inject:end --><script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":100,"height":175},"mobile":{"show":true},"log":false});</script></body>
+<!-- hexo-inject:end --></body>
 
 
 
